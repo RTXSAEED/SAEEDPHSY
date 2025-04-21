@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SK PHOTOGRAPHY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="SK Logo">
+      <h1>SK PHOTOGRAPHY</h1>
+    </div>
+    <button class="menu-button" onclick="toggleMenu()">&#8942;</button>
+    <button class="lang-switch" onclick="toggleLanguage()">AR</button>
+    <nav id="menu">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#request">Request a Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      SK PHOTOGRAPHY is a project passionate about capturing the natural beauty of life’s moments. We provide creative and elegant photography services that combine professionalism with artistry.
+      We believe that every shot can tell a story, and our goal is to make every image come to life.
+    </p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Photo Sessions</li>
+      <li>Indoor Session</li>
+      <li>Outdoor Session</li>
+      <li>Event Photography</li>
+      <li>Video Editing</li>
+      <li>Portraits</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Our portfolio of photos will be showcased here soon.</p>
+  </section>
+
+  <section id="contact" class="contact-info">
+    <h2>Contact</h2>
+    <ul>
+      <li><strong>Phone:</strong> 00963965245016</li>
+      <li><strong>Email:</strong> saeedalkhatib85@gmail.com</li>
+      <li><strong>Address:</strong> Artouz - Damascus Countryside - Syria</li>
+    </ul>
+  </section>
+
+  <section id="request">
+    <h2>Request a Service</h2>
+    <form action="https://formspree.io/f/mgvkwndz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="address" placeholder="Your Address">
+      <select name="service">
+        <option value="Photo Sessions">Photo Sessions</option>
+        <option value="Indoor Session">Indoor Session</option>
+        <option value="Outdoor Session">Outdoor Session</option>
+        <option value="Event Photography">Event Photography</option>
+        <option value="Video Editing">Video Editing</option>
+        <option value="Portraits">Portraits</option>
+      </select>
+      <button type="submit" class="submit">Send Request</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      if (currentLang === "en") {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "index-en.html";
+      }
+    }
+  </script>
+</body>
+</html>
